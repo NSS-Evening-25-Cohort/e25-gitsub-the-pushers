@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import { renderToDom } from "./utlities/renderToDom.js";
 import { repos } from "./data/reference.js";
 import { card } from "./components/card.js";
 import { navbar } from "./components/navbar.js";
 import { footer } from "./components/footer.js";
+=======
+import { renderToDom } from "./utlities/renderToDom";
+import { repos } from "./data/reference";
+import { card } from "./components/card";
+import { navbar } from "./components/navbar";
+import { footer } from "./components/footer";
+import { overviewPage } from "./components/overviewPage";
 
-// TODO: profile.js
+>>>>>>> de3fb6f1d1e4b535390c4a509b6799cf06cc9d28
+
 // TODO: form.js
 
 const renderProjects = (array) => {
