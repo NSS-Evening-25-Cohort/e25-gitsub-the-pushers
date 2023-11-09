@@ -4,10 +4,6 @@ import { card } from "./components/card.js";
 import { navbar } from "./components/navbar.js";
 import { footer } from "./components/footer.js";
 import { overviewPage } from "./components/overviewPage.js";
-<<<<<<< HEAD
-=======
-
->>>>>>> 8bc3d0e92edb45754417cf1d29e8b1261a7b965c
 
 // TODO: form.js
 
