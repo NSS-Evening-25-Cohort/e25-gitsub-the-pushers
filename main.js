@@ -1,55 +1,44 @@
-<<<<<<< HEAD
 import { renderToDom } from "./utlities/renderToDom.js";
 import { repos } from "./data/reference.js";
 import { card } from "./components/card.js";
 import { navbar } from "./components/navbar.js";
 import { footer } from "./components/footer.js";
-=======
-import { renderToDom } from "./utlities/renderToDom";
-import { repos } from "./data/reference";
-import { card } from "./components/card";
-import { navbar } from "./components/navbar";
-import { footer } from "./components/footer";
-import { overviewPage } from "./components/overviewPage";
-
->>>>>>> de3fb6f1d1e4b535390c4a509b6799cf06cc9d28
+import { overviewPage } from "./components/overviewPage.js";
 
 // TODO: form.js
 
 const renderProjects = (array) => {
   let domString = "";
-  {
-    domString += `<div class="card">
+  for (let taco of array) {
+    domString += `<div id="${taco.id}" class="card">
     <div class="card-header">
-      Quote
+      ${taco.name}
     </div>
     <div class="card-body">
       
-        <p>A well-known quote, contained in a blockquote element.</p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        <p>${taco.description}</p>
+        <footer class="blockquote-footer">${taco.language}<cite title="Source Title">Source Title</cite></footer>
+        <div id="${taco.pinned}"></div>
       
     </div>
   </div>`;
   }
 
-  let newForm = `<form class="row g-3">
-  <div class="col-auto">
-    <label for="staticEmail2" class="visually-hidden">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-  </div>
-  <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-  </div>
-</form>`;
-
+  let newForm = `<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <button id="createProject" type"bg-primary">Create Project</button>
+</div>`;
   domString += newForm;
-
   const app = document.querySelector("#app");
   app.innerHTML = domString;
 };
+
+const navBtn = document.querySelector("#projectsBtn");
+
+navBtn.addEventListener("click", renderProjects(repos));
 console.log("hello world");
-renderProjects(repos);
