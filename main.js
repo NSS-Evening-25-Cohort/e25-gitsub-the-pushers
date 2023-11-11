@@ -7,6 +7,10 @@ import { overviewPage } from "./components/overviewPage.js";
 
 // TODO: form.js
 
+
+renderToDom("#navbar", navbar());
+
+
 const renderProjects = (array) => {
   let domString = "";
   for (let taco of array) {
