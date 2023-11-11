@@ -7,8 +7,6 @@ import { overviewPage } from "./components/overviewPage.js";
 import { packagesList } from "./data/packagesRefrence.js";
 import { profileDom } from "./components/profile.js";
 
-// TODO: form.js
-
 renderToDom("#navbar", navbar());
 
 const renderProjects = (array) => {
@@ -27,29 +25,31 @@ const renderProjects = (array) => {
     </div>
   </div>`;
   }
-
-  let newForm = `<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  <button id="createProject" type"bg-primary">Create Project</button>
-</div>`;
-  domString += newForm;
-  const app = document.querySelector("#app");
-  app.innerHTML = domString;
+renderToDom("#app", domString)
 };
+
+const renderProjectForm = () => {
+  let formString = "";
+  formString += `<div class="mb-3">
+    <label for="projectName" class="form-label">Project board name</label>
+    <input type="text" class="form-control" id="projectName" placeholder="Project Name">
+  </div>
+  <div class="mb-3">
+    <label for="projectDescription" class="form-label">Description</label>
+    <textarea class="form-control" id="projectDescription" rows="3"></textarea>
+    <button id="createProject" type class ="btn bg-primary">Create Project</button>
+  </div>`;
+  renderToDom("#formDiv", formString);
+};
+
+
 
 const navBtn = document.querySelector("#projectsBtn");
 
 navBtn.addEventListener("click", renderProjects(repos));
 console.log("hello world");
 
-
-
 renderToDom("#footer", footer());
 renderToDom("#navbar", navbar());
 renderToDom("#profile", profileDom());
-
+renderProjectForm();
