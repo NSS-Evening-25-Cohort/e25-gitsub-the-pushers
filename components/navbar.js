@@ -8,5 +8,5 @@ export const navbar = () => {
   <a class="nav-link" id="packagesBtn" href="#">Packages</a>
 </div>
   </div>
-</nav>`
+</nav>`;
 };
