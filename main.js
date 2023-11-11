@@ -47,3 +47,5 @@ const navBtn = document.querySelector("#projectsBtn");
 
 navBtn.addEventListener("click", renderProjects(repos));
 console.log("hello world");
+
+renderToDom("#footer", footer());
