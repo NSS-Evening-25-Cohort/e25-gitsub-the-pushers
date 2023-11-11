@@ -4,6 +4,7 @@ import { card } from "./components/card.js";
 import { navbar } from "./components/navbar.js";
 import { footer } from "./components/footer.js";
 import { overviewPage } from "./components/overviewPage.js";
+import { packagesList } from "./data/packagesRefrence.js";
 
 // TODO: form.js
 
