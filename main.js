@@ -9,9 +9,7 @@ import { profileDom } from "./components/profile.js";
 
 // TODO: form.js
 
-
 renderToDom("#navbar", navbar());
-
 
 const renderProjects = (array) => {
   let domString = "";
