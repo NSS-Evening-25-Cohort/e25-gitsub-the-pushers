@@ -1,3 +1,22 @@
 body {
   background-color: grey;
+  flex-direction: column;
 }
+#profile{
+  padding: 40px;
+  margin: 40px;
+
+}
+#overviewPage{
+  display: flex;
+  padding: 40px;
+  margin: 40px;
+}
+#navigation{
+  justify-content: flex-end;
+}
+#app{
+  display: flexbox;
+}
+
+
