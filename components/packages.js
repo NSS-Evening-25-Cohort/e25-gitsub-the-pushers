@@ -1,3 +1,5 @@
+import { packagesList } from "../data/packagesRefrence.js"
+
 export const packages = (object) => {
   return `<div class="pkgCard" class="card" style="width: 18rem;">
     <div class="card-body">
