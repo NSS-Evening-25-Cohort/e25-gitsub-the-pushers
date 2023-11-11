@@ -42,3 +42,16 @@ form.addEventListener ('submit', (event) => {
     renderToPackageDom(packagesList)
     form.reset()
 })
+
+app.addEventListener('click', (event) => {
+  if (event.target.id.includes("delete")){
+
+    const [, id] = event.target.id.split("--")
+
+    const index = packagesList.findIndex(object => object.id === Number(id))
+
+    packagesList.splice(index, 1)
+
+    renderToPackageDom(packagesList)
+  }
+})
