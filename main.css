@@ -1,20 +1,21 @@
 body {
   background-color: grey;
-  flex-direction: column;
+  flex-direction: row;
 }
-#profile{
-  padding: 40px;
-  margin: 40px;
-
-}
-#overviewPage{
+.container{
   display: flex;
-  padding: 40px;
-  margin: 40px;
+  align-self: baseline;
+    
 }
+
+#card.profile-card{
+height: 100%;
+display: flex;
+padding: 100px;
+margin: 100px;
+}
+
 #navigation{
   justify-content: flex-end;
 }
-#app{
-  display: flexbox;
-}
+
