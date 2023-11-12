@@ -7,6 +7,7 @@ import { overviewPage } from "./components/overviewPage.js";
 import { profileDom } from "./components/profile.js";
 
 renderToDom("#navbar", navbar());
+renderToDom("#profile", profileDom());
 
 const renderProjects = (array) => {
   let domString = "";
