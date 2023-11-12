@@ -1,8 +1,8 @@
 export const profileDom = () => {
   return `<div class="card profile-card">
-<img src="..." class="card-img-top" alt="...">
-<div class="card-body">
-<h5 class="card-title">ProfileOnDom</h5>
+<img src="images/Tommyspace.webp" class="card-img-top" alt="...">
+<div class="card-body" id="profile">
+<h5 class="card-title">Tommy Space</h5>
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 </div>
 <ul class="list-group list-group-flush">
@@ -17,3 +17,5 @@ export const profileDom = () => {
 </div>
 </div>`;
 };
+
+

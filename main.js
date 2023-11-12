@@ -4,40 +4,7 @@ import { card } from "./components/card.js";
 import { navbar } from "./components/navbar.js";
 import { footer } from "./components/footer.js";
 import { overviewPage } from "./components/overviewPage.js";
-
-// TODO: form.js
-let projectsArray = [
-  {
-    id: 1,
-    name: "First Project",
-    description: "This is a description of the first project",
-    public: true,
-  },
-  {
-    id: 2,
-    name: "Second Project",
-    description: "This is a description of the second project",
-    public: true,
-  },
-  {
-    id: 3,
-    name: "Third Project",
-    description: "This is a description of the third project",
-    public: true,
-  },
-  {
-    id: 4,
-    name: "Fourth Project",
-    description: "This is a description of the fourth project",
-    public: true,
-  },
-  {
-    id: 5,
-    name: "Fifth Project",
-    description: "This is a description of the fifth project",
-    public: true,
-  },
-];
+import { profileDom } from "./components/profile.js";
 
 renderToDom("#navbar", navbar());
 
@@ -57,22 +24,21 @@ const renderProjects = (array) => {
     </div>
   </div>`;
   }
+  renderToDom("#app", domString);
+};
 
-  let newForm = `<div class="mb-3"><form>
-  <label for="projectName-label" class="projectName">Project Name</label>
-  <input type="form-label" class="form-control" id="projectName-label" placeholder="New Project"></input>
-</div>
-<div class="mb-3">
-  <label for="projDescription" class="form-label">Example textarea</label>
-  <input type="text" class="projectDescriptionform-label" id="projDescription"></input>
-  <input type="text" class="publicForm-control" id="exampleFormControlTextarea1" rows="3">
-  </input>
-  <button id="createProject" type"bg-primary">Create Project</button>
-  </form>
-</div>`;
-  domString += newForm;
-  const app = document.querySelector("#app");
-  app.innerHTML = domString;
+const renderProjectForm = () => {
+  let formString = "";
+  formString += `<div class="mb-3">
+    <label for="projectName" class="form-label">Project board name</label>
+    <input type="text" class="form-control" id="projectName" placeholder="Project Name">
+  </div>
+  <div class="mb-3">
+    <label for="projectDescription" class="form-label">Description</label>
+    <textarea class="form-control" id="projectDescription" rows="3"></textarea>
+    <button id="createProject" type class ="btn bg-primary">Create Project</button>
+  </div>`;
+  renderToDom("#formDiv", formString);
 };
 
 const projBtn = document.querySelector("#projectsBtn");
@@ -80,25 +46,7 @@ const projBtn = document.querySelector("#projectsBtn");
 projBtn.addEventListener("click", renderProjects(projectsArray));
 console.log("hello world");
 
-const projectForm = document.querySelector("#createProject");
-
-const createProjectForm = (e) => {
-  e.preventDefault();
-  let newProjectObj = {
-    id: projectsArray.length + 1,
-    name: document.querySelector("#projectName-label").value,
-    description: document.querySelector(".projectDescriptionform-label").value,
-    public: true,
-  };
-
-  // if (projectsArray[projectsArray.length - 1].public === true) {
-  //   ("Public");
-  // } else {
-  //   ("Private");
-  // }
-  projectsArray.push(newProjectObj);
-  renderToDom("#app", projectsArray);
-  // form.reset();
-};
-
-projectForm.addEventListener("click", createProjectForm);
+renderToDom("#footer", footer());
+renderToDom("#navbar", navbar());
+renderToDom("#profile", profileDom());
+renderProjectForm();

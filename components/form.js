@@ -1,10 +1,10 @@
 export const form = (object) => {
   return `<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  <label for="projectName" class="form-label">Project board name</label>
+  <input type="text" class="form-control" id="projectName" placeholder="Sorting Hat">
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <label for="projectDescription" class="form-label">Description</label>
+  <textarea class="form-control" id="projectDescription" rows="3"></textarea>
 </div>`;
 };
