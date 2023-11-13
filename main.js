@@ -88,7 +88,7 @@ let createProject = (e) => {
 
 const navBtn = document.querySelector("#projectsBtn");
 
-navBtn.addEventListener("click", renderProjects(projects));
+// navBtn.addEventListener("click", renderProjects(projects));
 
 const createProjBtn = document.querySelector("#createProjectBtn");
 createProjBtn.addEventListener("click", createProject);
@@ -97,19 +97,17 @@ createProjBtn.addEventListener("click", createProject);
 // PACKAGES 
 const packagesBtn = document.querySelector("#packagesBtn")
 packagesBtn.addEventListener("click", () => {
-  console.log("Packages button has been clicked in navbar");
 }) 
 
 // PROJECTS
 const projectsBtn = document.querySelector("#projectsBtn");
 projectsBtn.addEventListener("click", () => {
-  console.log("Projects button has been clicked in navbar");
+  renderProjects(projects)
 })
 
 // REPOS
 const reposBtn = document.querySelector("#reposBtn");
 reposBtn.addEventListener("click", () => {
-  console.log("Repos button has been clicked in navbar")
 })
 
 // Overview

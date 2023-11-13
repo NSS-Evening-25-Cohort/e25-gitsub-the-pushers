@@ -14,7 +14,7 @@ export const packages = (object) => {
 const app = document.querySelector('#app')
 const form = document.querySelector('form')
   
-const renderToPackageDom = (array) => {
+export const renderToPackageDom = (array) => {
   let packageDomString = ""
   
   for (let object of array) {
