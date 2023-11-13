@@ -6,7 +6,6 @@ import { footer } from "./components/footer.js";
 import { overviewPage } from "./components/overviewPage.js";
 import { profileDom } from "./components/profile.js";
 import { projects } from "./components/projects.js";
-import { packagesList } from "../data/packagesRefrence.js"
 // THIS IS FOR PROJECTS PAGE
 renderToDom("#navbar", navbar());
 
@@ -88,7 +87,7 @@ let createProject = (e) => {
 
 const navBtn = document.querySelector("#projectsBtn");
 
-navBtn.addEventListener("click", renderProjects(projects));
+// navBtn.addEventListener("click", renderProjects(projects));
 
 const createProjBtn = document.querySelector("#createProjectBtn");
 createProjBtn.addEventListener("click", createProject);
@@ -97,19 +96,17 @@ createProjBtn.addEventListener("click", createProject);
 // PACKAGES 
 const packagesBtn = document.querySelector("#packagesBtn")
 packagesBtn.addEventListener("click", () => {
-  console.log("Packages button has been clicked in navbar");
 }) 
 
 // PROJECTS
 const projectsBtn = document.querySelector("#projectsBtn");
 projectsBtn.addEventListener("click", () => {
-  console.log("Projects button has been clicked in navbar");
+  renderProjects(projects)
 })
 
 // REPOS
 const reposBtn = document.querySelector("#reposBtn");
 reposBtn.addEventListener("click", () => {
-  console.log("Repos button has been clicked in navbar")
 })
 
 // Overview
