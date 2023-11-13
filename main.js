@@ -6,6 +6,7 @@ import { footer } from "./components/footer.js";
 import { overviewPage } from "./components/overviewPage.js";
 import { profileDom } from "./components/profile.js";
 import { projects } from "./components/projects.js";
+import { packagesList } from "../data/packagesRefrence.js"
 // THIS IS FOR PROJECTS PAGE
 renderToDom("#navbar", navbar());
 
@@ -84,6 +85,7 @@ let createProject = (e) => {
   formRes.reset();
 };
 
+
 const navBtn = document.querySelector("#projectsBtn");
 
 navBtn.addEventListener("click", renderProjects(projects));
@@ -91,3 +93,28 @@ navBtn.addEventListener("click", renderProjects(projects));
 const createProjBtn = document.querySelector("#createProjectBtn");
 createProjBtn.addEventListener("click", createProject);
 // THIS IS FOR PROJECTS PAGE
+
+// PACKAGES 
+const packagesBtn = document.querySelector("#packagesBtn")
+packagesBtn.addEventListener("click", () => {
+  console.log("Packages button has been clicked in navbar");
+}) 
+
+// PROJECTS
+const projectsBtn = document.querySelector("#projectsBtn");
+projectsBtn.addEventListener("click", () => {
+  console.log("Projects button has been clicked in navbar");
+})
+
+// REPOS
+const reposBtn = document.querySelector("#reposBtn");
+reposBtn.addEventListener("click", () => {
+  console.log("Repos button has been clicked in navbar")
+})
+
+// Overview
+const overviewBtn = document.querySelector("#overviewBtn");
+
+overviewBtn.addEventListener("click", () => {
+  console.log("Overview button has been clicked in navbar");
+})
