@@ -8,6 +8,7 @@ import { profileDom } from "./components/profile.js";
 import { projects } from "./components/projects.js";
 // THIS IS FOR PROJECTS PAGE
 renderToDom("#navbar", navbar());
+renderToDom("#profile", profileDom());
 
 const renderProjects = (array) => {
   let domString = "";
