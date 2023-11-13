@@ -8,7 +8,7 @@ return `
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" id="home" aria-current="page" href="#">Overview</a>
+          <a class="nav-link active" id="overviewBtn" aria-current="page" href="#">Overview</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" id="reposBtn" href="#">Repos</a>

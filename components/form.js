@@ -1,4 +1,4 @@
-export const form = (object) => {
+export const form = () => {
   return `<div class="mb-3">
   <label for="projectName" class="form-label">Project board name</label>
   <input type="text" class="form-control" id="projectName" placeholder="Sorting Hat">
