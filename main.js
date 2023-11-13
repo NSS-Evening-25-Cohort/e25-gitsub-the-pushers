@@ -5,7 +5,8 @@ import { navbar } from "./components/navbar.js";
 import { footer } from "./components/footer.js";
 import { overviewPage } from "./components/overviewPage.js";
 import { profileDom } from "./components/profile.js";
-import { projects } from "./components/projects.js";
+import { projects } from "./data/projects.js";
+import { packagesList } from "../data/packagesRefrence.js"
 // THIS IS FOR PROJECTS PAGE
 renderToDom("#navbar", navbar());
 
@@ -110,7 +111,7 @@ reposBtn.addEventListener("click", () => {
 })
 
 // Overview
-const overviewBtn = document.querySelector("#overviewBtn");
+const overviewBtn = document.querySelector("#home");
 
 overviewBtn.addEventListener("click", () => {
   console.log("Overview button has been clicked in navbar");
